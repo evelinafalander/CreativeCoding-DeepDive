@@ -1,7 +1,8 @@
 function setup() {
   createCanvas(1450, 800);
-  //frameRate(5); //decides the frames per second of the draw() loop
+  // frameRate(5); //decides the frames per second of the draw() loop
   noLoop();
+  background("black");
 }
 // (x(move right), y(move down))
 
@@ -104,10 +105,11 @@ function myMath(x) {
 }
 function mySinus(x) {
   var h = 60 * sin(x);
-  fill("pink");
+  fill(123 - h / 3, 200 - h / 4, 255 - h / 2, 220);
   noStroke();
-  rect(x, 300, 3, -h);
+  rect(x, 300, 4, h);
 
-  fill("blue");
-  rect(x, 300, 2, h * 1.4);
+  fill(238, 184, 255, 190);
+
+  rect(x, 300, 3, h * 1.4);
 }
