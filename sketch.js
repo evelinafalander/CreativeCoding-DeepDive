@@ -40,9 +40,8 @@ function draw() {
     for (var y = 100; y <= 500; y += 2) {
       noiseTest2(x, y);
     }
-  } 
-
-// TESTING NOISE
+  } */
+  // TESTING THE NOISE FUNCTION
   /* background("blue");
   fill("white");
   noStroke();
@@ -50,8 +49,7 @@ function draw() {
     for (var y = 100; y <= 700; y += 1) {
       noiseTest(x, y);
     }
-  }
-
+  }*/
   //RANDOM NOISE FUNCTION
   /*for (let x = 0; x < width; x++) {
     let noiseVal = noise((mouseX + x) * noiseScale, mouseY * noiseScale);
@@ -70,44 +68,39 @@ function draw() {
   } */
   //PICKING VALUES FOR THE MY FLOWER FUNCTION
   //myFlower(200, 200, "blue");
-  //CALLS MY BUBBLE FUNCTION TIMES
+  //CALLS MY BUBBLE FUNCTION 20 TIMES
   /*for (var i = 0; i < 20; i++) {
     bubble();
-  } 
-
-
-
+  } */
+  //CREATES A FLOWER CONTINOUSLY AT RANDOM POSTIONS
+  /*var myRandom = 0;
   setInterval(rndFlower, 1000);
   if (myRandom === 0) {
-   myRandom = rndFlower();
-   }
-
+    myRandom = rndFlower();
+  }*/
   //LOPING IN A STRAIGHT ROW
   /*for (var x = 0; x <= 1100; x = x + 50) {
     fill(x / 3, x / 4, x / 4);
     circle(x, 100, x / 3);
     strokeWeight(5);
-  }
-
-
-  for (var x = 10; x <= 500; x = x + 30) {
+  }*/
+  //CREATES APATTERN OF CIRCELS ON TOP OF EACHOTER
+  /* for (var x = 10; x <= 500; x = x + 30) {
     noFill();
     circle(400, 450, x);
     strokeWeight(4);
     stroke(255 - x / 1, 255 - x / 2, 255 - x / 4);
-  }
-
+  }*/
   // LINE THAT GOSE ACROSS THE PAGE; USING X=Y
-  for (var i = 0; i < 800; i++) {
-    myMath(i); 
-  }
-
+  /* for (var i = 0; i < 800; i++) {
+    myMath(i);
+  }*/
   // CREATES A SINUS CURVE
-  for (var i = 0; i < 1000; i = i + 6) {
+  /* for (var i = 0; i < 1000; i = i + 6) {
     mySinus(i);
-  }
-
-  for (var i = 10; i < 1000; i = i + 16) {
+  }*/
+  //ADD THIS FOR EXTRA EFFECT TO SINUS CURVE
+  /*for (var i = 10; i < 1000; i = i + 16) {
     mySinus(i);
   }*/
 }
@@ -175,7 +168,7 @@ function randomColor(x, y) {
 
 function myMath(x) {
   var y = x;
-  fill("red");
+  fill("pink");
   circle(x, y, 10);
   noStroke();
 }
