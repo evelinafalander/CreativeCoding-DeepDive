@@ -12,9 +12,23 @@ function setup() {
 //var myRandom = 0;
 //let noiseScale = 0.02;
 
+//IN THE DRAW FUNCTION YOU CREATE YOUR ART; DEFALUT SETING AUTOMATICALLY RUNS THE DRAW FUNCTION CONTIONUOUSLY
+
+//NOTE AT THE BOTTOM OF THE PAGE YOU WILL FIND ALL FUNCTIONS THAT I USE IN MY DRAW FUNCTION
+
 function draw() {
-  //SETS COLOR MODE TO HSB INSTEAD OF RGB
+  //SETS COLOR MODE TO HSB INSTEAD OF RGB, RGB IS DEFAULT
   //colorMode(HSB);
+  //REPEATS THE BLOB FUNCTION
+  /*for (var i = 10; i < 610; i++) {
+    blobs();
+  } */
+  //CREATES PATTERN USING SIN AND COS
+  /* for (var x = 0; x <= 360; x += 1) {
+    for (var y = 0; y <= 360; y += 1) {
+      spot(x);
+    }
+  }*/
   // MY SECOND FRACTAL FUNCTION
   //tree(500, 720, 50, 0, 200);
   //MY FIRST FRACTAL FUNCTION
@@ -54,13 +68,8 @@ function draw() {
       repCircle(x, y);
     }
   } */
-  //REPEATS THE BLOB FUNCTION
-  /*for (var i = 0; i < 810; i++) {
-    blobs();
-  }
   //PICKING VALUES FOR THE MY FLOWER FUNCTION
   //myFlower(200, 200, "blue");
-
   //CALLS MY BUBBLE FUNCTION TIMES
   /*for (var i = 0; i < 20; i++) {
     bubble();
@@ -112,7 +121,7 @@ function draw() {
 //noLoop(); stoppes the draw loop once mosue is released
 //}
 
-//ALL MY FUNCTIONS
+//ALL MY FUNCTIONS THAT I CALL IN MY DRAW FUNCTION
 function myFlower(x, y, c) {
   /*var x = 725;
   var y = 400;*/
@@ -189,8 +198,8 @@ function blobs() {
   var d = dist(600, 500, x, y);
 
   var size = 80 * exp(-sq(d / 200));
-  fill(215 - size, 128, size * 4, 150 - size);
-  stroke(255 - size, 228, size * 5);
+  fill(50 - size, 55, size * 2, 185 - size);
+  stroke(55 - size, 228, size * 5);
   circle(x, y, size);
 }
 
@@ -257,4 +266,14 @@ function tree(x, y, brightness, angle, length) {
     tree(x2, y2, brightness + random(-20, 20), angle - 25, length * 0.6);
     tree(x2, y2, brightness + random(-30, 30), angle - 7, length * 0.7);
   }
+}
+
+function spot(a) {
+  var x = 200 * cos(a * 3);
+  var y = 200 * sin(a * 4);
+
+  noFill();
+  stroke(0, 100, 90, 0.9);
+
+  circle(400 + x, 300 - y, 70);
 }
